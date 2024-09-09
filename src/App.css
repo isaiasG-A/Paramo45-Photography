@@ -1,0 +1,892 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Cormorant+Infant&display=swap');
+
+/* GENERAL STYLES */
+
+.html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
+.App {
+  text-align: center;
+  background-color: #DCD4CC;
+}
+
+h1, h2, h3, h4, h5, h6, a, button {
+  font-family: 'Cormorant Infant', serif;
+}
+
+ a {
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+p, form {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+
+/* TOP SECTION */
+
+.top-section {
+  background-image: url(./images/homeBck.jpg);
+  height: 990px;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title{
+  padding: 12% 0 0 33%;
+}
+
+.paramo-title {
+    font-style: italic;
+    font-size: 11rem;
+    font-weight: normal;
+}
+
+.categoryCards {
+  margin-left: 21%;
+  margin-bottom: 7%;
+  width: 100%;
+}
+
+.photo-title {
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+.imageNature {
+  height: 88%;
+}
+
+/* ABOUT ME */
+
+.about {
+  width: 100%;
+  margin: 9% 0;
+  background-color:#FCF4E4;
+  padding-bottom: 5%;
+}
+
+.about p {
+  font-size: 2.5rem;
+  width: 41%;
+  text-align: center;
+  margin-left: 29%;
+  padding: 4%;
+  font-style: italic;
+}
+ 
+.about-bttn {
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid #987C6B;;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #272727;
+  margin: 0 1em;
+  padding: 0.25em 3em;
+  text-align: center;
+}
+
+.about-bttn:hover {
+  color: #272727;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.12), 0 2px 3px 2px rgba(0, 0, 0, 0.24);
+  background: #A48B74;
+}
+.about-bttn:active {
+  background: #DCC4A9;
+  box-shadow: inset 0px 0px 5px #A48B74;
+  outline: none;
+}
+
+.aboutMe {
+  padding-bottom: 8.2%;
+}
+
+.aboutMe h1 {
+  font-size: 4rem;
+  padding: 3% 0;
+}
+
+.description img {
+  width: 19.4%;
+  border-radius: 50%;
+  margin-bottom: 3%;
+}
+
+.description h2 {
+  font-size: 4rem;
+}
+
+.description p {
+  font-size: 2.5rem;
+  padding: 0 15%;
+}
+
+/*Newsletter*/
+
+.newsletter {
+  padding-bottom: 8%;
+  padding-top: 4%;
+}
+
+.newsletterHeader h1{
+  font-size: 5rem;
+  font-weight: normal;
+  padding-bottom: 5%;
+}
+
+.newsletterHeader h3 {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items:  center;
+  font-size: 2rem;
+  margin-top: 6%;
+}
+
+label {
+  margin-bottom: 2px;
+  text-align: left;
+  width: 29%;
+}
+
+input {
+  width: 100%;
+  padding: 3%;
+  margin: 4% 0;
+  box-sizing: border-box;
+  border: 1px solid #987C6B;
+  border-radius: 4px;
+}
+
+button {
+  background:#DCC4A9;
+  border: 1px solid #A48B74;
+  padding: .5% 6%;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.12), 0 2px 2px 1px rgba(0, 0, 0, 0.24);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.12), 0 2px 3px 2px rgba(0, 0, 0, 0.24);
+  background: #A48B74;
+}
+
+button:active {
+  background: #DCC4A9;
+  box-shadow: inset 0px 0px 5px #A48B74;
+  outline: none;
+}
+
+.error {
+  font-size: 1.5rem;
+  color: red;
+  padding-bottom: 8%;
+}
+
+
+/*Gallery*/
+
+.imagesContainer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(20, 5vw);
+  grid-gap: .5rem;
+  margin: .5%;
+}
+
+.imgEffect, .imgNatureEffect, .worldImgEffect{
+  transition: 2s;
+}
+
+.imagesContainer:hover .imgEffect, .natureImages:hover .imgNatureEffect, .worldImages:hover .worldImgEffect{
+  filter: grayscale(1);
+}
+
+.galleryImg, .natureImg, .worldImg {
+  cursor: pointer;
+}
+.galleryImg:hover .imgEffect, .natureImg:hover .imgNatureEffect, .worldImg:hover .worldImgEffect{
+  filter: grayscale(0);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img1 {
+  grid-row-start: 1;
+  grid-row-end: 3; 
+}
+
+.img2 {
+  grid-row-start: 1;
+  grid-row-end: 5;
+  grid-column-start: 4;
+}
+
+.img3 {
+  grid-column-start: 6;
+  grid-row-start: 7;
+  grid-row-end: 9;
+}
+
+.img4 {
+  grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 3;
+
+}
+
+.img5 {
+  grid-column-start: 6;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+
+.img6 {
+  grid-column-start: 8;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.img7 {
+  grid-column-start: 2;
+  grid-row-start: 11;
+  grid-row-end: 13;
+  grid-column-end: 4;
+}
+
+.img8 {
+  grid-row-start: 11;
+  grid-column-start: 4;
+  grid-row-end: 13;
+}
+
+.img9 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.img10 {
+  grid-row-start: 19;
+  grid-column-start: 3;
+  grid-row-end: 21;
+}
+
+.img11 {
+  grid-column-start: 8;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+
+.img12 {
+  grid-column-start: 2;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+
+.img13 {
+  grid-column-start: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.img14 {
+  grid-row-start: 3;
+  grid-column-start: 7;
+  grid-row-end: 5;
+}
+
+.img15 {
+  grid-column-start: 8;
+  grid-row-start: 13;
+  grid-row-end: 17;
+}
+
+.img16 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+
+.img17 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 9
+}
+
+.img18 {
+  grid-column-start: 7;
+  grid-row-start: 5;
+  grid-column-end: 9;
+  grid-row-end: 9;
+}
+
+.img19 {
+  grid-row-start: 17;
+  grid-row-end: 19;
+}
+
+.img20 {
+  grid-column-start: 1;
+  grid-row-start: 15;
+  grid-row-end: 17;
+}
+
+.img21 {
+  grid-row-start: 19;
+  grid-row-end: 21;
+}
+
+.img22 {
+  grid-column-start: 7;
+  grid-row-start: 13;
+  grid-row-end: 17;
+}
+
+.img23 {
+  grid-column-start: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 8;
+}
+
+.img24 {
+  grid-column-start: 4;
+  grid-row-start: 17;
+  grid-row-end: 19;
+}
+
+.img25 {
+  grid-column-start: 5;
+  grid-row-start: 7;
+  grid-row-end: 11;
+}
+
+.img26 {
+  grid-row-end: 5;
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.img27 {
+  grid-column-start: 4;
+  grid-row-start: 13;
+  grid-row-end: 17;
+}
+
+.img28 {
+  grid-column-start: 2;
+  grid-row-start: 15;
+  grid-column-end: 4;
+  grid-row-end: 19;
+}
+
+.img29 {
+  grid-column-start: 3;
+  grid-row-start: 13;
+  grid-row-end: 15;
+}
+
+.img30 {
+  grid-column-start: 5;
+  grid-row-start: 17;
+  grid-row-end: 21;
+  grid-column-end: 7;
+}
+
+.img31 {
+  grid-row-start: 13;
+  grid-row-end: 15;
+}
+
+.img32 {
+  grid-column-start: 5;
+  grid-row-start: 3;
+  grid-column-end: 7;
+  grid-row-end: 7;
+}
+
+.img33 {
+  grid-column-start: 7;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+
+.img34 {
+  grid-column-start: 3;
+  grid-row-start: 7;
+  grid-column-end: 5;
+  grid-row-end: 11;
+}
+
+.img35 {
+  grid-column-start: 5;
+  grid-row-start: 11;
+  grid-column-end: 7;
+  grid-row-end: 15;
+}
+
+.img36 {
+  grid-row-start: 17;
+  grid-row-end: 19;
+}
+
+.img37 {
+  grid-column-start: 1;
+  grid-row-start: 17;
+  grid-row-end: 19;
+}
+
+.img38 {
+  grid-row-start: 3;
+  grid-row-end: 7;
+}
+
+.img39 {
+  grid-column-start: 1;
+  grid-row-start: 19;
+  grid-row-end: 21;
+  grid-column-end: 3;
+}
+
+.img40 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 9;
+  grid-row-end: 11;
+}
+
+.img41 {
+  grid-row-start: 19;
+  grid-row-end: 21;
+}
+
+.img42 {
+  grid-column-start: 1;
+  grid-row-start: 11;
+  grid-row-end: 15;
+  grid-column-end: 2;
+}
+
+.img43 {
+  grid-row-start: 19;
+  grid-row-end: 21;
+}
+
+.img44 {
+  grid-column-start: 7;
+  grid-row-start: 11;
+  grid-column-end: 9;
+  grid-row-end: 13;
+}
+
+.img45 {
+  grid-row-start: 15;
+  grid-column-start: 5;
+  grid-row-end: 17;
+  grid-column-end: 7;
+}
+
+.img46 {
+  grid-column-start: 4;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+
+/* PHOTO CATEGORIES */
+
+.catContainer {
+  width: 100%;
+}
+
+.natureImages {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 5vw);
+  grid-gap: .5rem;
+  margin: .5%;
+}
+
+.nature1 {
+  grid-row-start: 1;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.nature2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.nature3 {
+  grid-row-start: 5;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-end: 8;
+}
+
+.nature4 {
+  grid-row-start: 1;
+  grid-column-start: 4;
+  grid-row-end: 3;
+}
+
+.nature5 {
+  grid-row-start: 6;
+  grid-row-end: 8;
+}
+
+.nature6 {
+  grid-column-start: 7;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 9;
+}
+
+.nature7 {
+  grid-column-start: 6;
+  grid-row-start: 5;
+  grid-row-end: 8;
+}
+
+.nature8 {
+  grid-row-start: 3;
+  grid-column-start: 4;
+  grid-row-end: 5;
+}
+
+.nature9 {
+  grid-row-start: 5;
+  grid-row-end: 8;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.nature10 {
+  grid-row-start: 1;
+  grid-row-end: 5;
+  grid-column-start: 5;
+  grid-column-end: 7;
+
+}
+
+.nature11 {
+  grid-column-start: 7;
+  grid-row-start: 5;
+  grid-row-end: 8;
+  grid-column-end: 9;
+}
+
+.nature12 {
+  grid-column-start: 7;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-end: 9;
+}
+
+.nature13 {
+  grid-row-start: 1;
+  grid-column-start: 3;
+  grid-row-end: 3;
+}
+
+.nature14 {
+  grid-row-start: 3;
+  grid-column-start: 3;
+  grid-row-end: 6;
+}
+
+.nature15 {
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.worldImages {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: .5rem;
+  margin: .5%;
+}
+
+.world1 {
+  grid-column-start: 3;
+  grid-row-start: 7;
+  grid-row-end: 9;
+}
+
+.world2 {
+  grid-column-start: 4;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+.world3 {
+  grid-column-start: 9;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  grid-column-end: 11;
+}
+.world4 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  grid-column-end: 5;
+}
+.world5 {
+  grid-column-start: 7;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  grid-column-end: 9;
+}
+.world6 {
+  grid-column-start: 6;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+.world7 {
+  grid-column-start: 7;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    grid-column-end: 9;
+}
+.world8 {
+  grid-column-start: 7;
+    grid-row-start: 7;
+    grid-column-end: 9;
+    grid-row-end: 9;
+}
+.world9 {
+  grid-column-start: 5;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+.world10 {
+  grid-column-start: 9;
+  grid-row-start: 5;
+  grid-row-end: 9;
+  grid-column-end: 11;
+}
+.world11 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end: 9;
+}
+
+.world12 {
+  grid-column-start: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.world13 {
+  grid-column-start: 5;
+  grid-row-start: 5;
+  grid-column-end: 7;
+  grid-row-end: 9;
+}
+.world14 {
+  grid-column-start: 3;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+.world15 {
+  grid-column-start: 3;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+.world16 {
+  grid-column-start: 1;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+.world17 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 3;
+  grid-row-end: 3;
+}
+
+.world18 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-column-end: 3;
+  grid-row-end: 5;
+}
+
+
+/*SOCIAL MEDIA SECTION */
+
+.social-container {
+  background-color: beige;
+  padding: 3% 5%;
+}
+
+.social-container h3 {
+    font-size: 2.5rem;
+    padding-bottom: 2%;
+}
+
+.social-container a {
+  padding: 0 5%;
+  transition:transform 400ms; 
+  /* Transition is used to determine a change within the icons. In this case, we want the icons to move up when we hover over them
+   - transform will determine HOW FAST will the icon move UP in MILLISECONDS */
+  display: inline-block;
+   /* We are setting it up to INLINE BLOCK in order to allow "translate" property to woek on inline elements
+    - By default, "translate property on line 62 does not work on inline elements"
+  */
+}
+
+/* This will create a hover effect when we scroll the mouse over the SM icon 
+  "translateY(-2px)" will send the icon UP when we hover over it
+*/
+ .social-container a:hover {
+  transform: translateY(10px);
+}
+
+.instagram {
+  color:  #bc2a8d;
+}
+.twitter {
+  color: #49a1eb;
+}
+.outline  {
+  color: #646464;
+}
+
+.css-pp29ct {
+  width: 30% !important;
+  height: 41vh !important;
+}
+
+
+/* MOBILE MEDIA QUERY */
+
+@media(max-width: 900px) {
+  .css-pp29ct {
+    width: auto !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 540px) {
+
+  a {
+    font-size: 2rem;
+  }
+ 
+  .top-section {
+    height: 92vh;
+    background-attachment: fixed;
+    background-size: 151vw 105vh;
+  }
+  .title {
+    padding: 54% 0;
+  }
+  .paramo-title {
+    font-size: 5rem;
+   }
+   
+   .photo-title {
+    font-size: 3.5rem;
+   }
+
+   .about p {
+    font-size: 2rem;
+    width: 69%;
+    margin-left: 17%;
+    padding: 9%;
+   }
+
+   .categoryCards {
+    margin-left: 0%;
+    padding-left: 6%;
+   }
+
+   .titleContainer {
+    position: absolute;
+    bottom: 65%;
+    right: 0;
+    width: 58%;
+   }
+
+   .imageNature, .imageWorld {
+    height: 52vh;
+   }
+
+   .social-container h3 {
+     font-size: 2rem;
+   }
+
+   .aboutMe {
+     padding-bottom: 17.2%;
+    }    
+
+    .aboutMe h1 {
+      font-size: 3rem;
+    }
+
+    .description img {
+      width: 31%;
+    }
+
+    .description h2 {
+      font-size: 3rem;
+  }
+
+    .description p {
+      font-size: 2rem;
+    }
+
+    .newsletterHeader h1 {
+      font-size: 4rem;
+    }
+
+    .newsletterHeader h3 {
+      font-size: 2rem;
+      padding: 0 13%;
+  }
+
+  label {
+    width: 51%;
+  }
+
+  input {
+    font-size: 1.2rem;
+  }
+
+  .imagesContainer, .natureImages, .worldImages {
+    display: list-item;
+    margin: 1%;
+  }
+
+}
